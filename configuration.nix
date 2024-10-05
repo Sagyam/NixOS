@@ -120,7 +120,6 @@
  virtualisation.virtualbox.guest.clipboard = true;
  virtualisation.virtualbox.guest.seamless = true;
 
-
  # GPG config
   services.pcscd.enable = true;
   programs.gnupg.agent = {
@@ -131,8 +130,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  firefox
-  tor
+  tor-browser
   vlc
   spotify
   audiobookshelf
@@ -158,7 +156,6 @@
   intel-one-mono
   nerdfonts
   pnpm
-  gpt4all
   vscode
   neovim
   scc
@@ -166,7 +163,6 @@
   eza
   duf
   diff-so-fancy
-  bandwhich
   gping
   dogdns
   fastfetch
