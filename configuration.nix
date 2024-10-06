@@ -130,53 +130,56 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  tor-browser
-  vlc
-  spotify
+  aria2
   audiobookshelf
+  bandwhich
+  bat
+  btop
+  curl
+  diff-so-fancy
+  doctl
+  dogdns
+  duf
+  eza
+  fastfetch
+  firefox
+  gh
+  git
+  gnupg
+  gping
+  httpie
+  intel-one-mono
   jellyfin
-  jellyfin-web
   jellyfin-ffmpeg	
   jellyfin-media-player
   jellyfin-mpv-shim
-  curl
-  httpie
-  minikube
-  k9s
-  qbittorrent
-  aria2
-  varia
-  git
-  gnupg
-  gh
-  lazygit
-  lazydocker
+  jellyfin-web
   jetbrains-toolbox
-  nodejs_22
-  intel-one-mono
-  nerdfonts
-  pnpm
-  vscode
-  neovim
-  scc
-  bat
-  eza
-  duf
-  diff-so-fancy
-  gping
-  dogdns
-  fastfetch
-  nerdfetch
+  k9s
+  kubernetes
+  lazydocker
+  lazygit
   micro
-  bandwhich
-  btop
-  zsh
+  minikube
+  neovim
+  nerdfetch
+  nerdfonts
+  nodejs_22
   oh-my-zsh
-  zsh-powerlevel10k
+  pnpm
+  qbittorrent
+  scc
+  spotify
   thefuck
-  zsh-bd
+  tor-browser
+  varia
+  vlc
+  vscode
+  zsh
   zsh-autocomplete
   zsh-autosuggestions
+  zsh-bd
+  zsh-powerlevel10k
   zsh-syntax-highlighting
   ];
 
