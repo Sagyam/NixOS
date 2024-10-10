@@ -24,6 +24,21 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Extra hosts
+  networking.extraHosts =
+  ''
+    159.65.215.188 dev-api.bitmosys.com
+    159.65.215.188 docs.dev-api.bitmosys.com
+    159.65.215.188 uptime.dev-api.bitmosys.com
+    159.65.215.188 metrics.dev-api.bitmosys.com
+    159.65.215.188 dashboard.dev-api.bitmosys.com
+    159.65.215.188 trace.dev-api.bitmosys.com
+    159.65.215.188 rabbitmq.dev-api.bitmosys.com
+    159.65.215.188 code.dev-api.bitmosys.com
+  '';
+
+
+
   # Enable bluetooth
   hardware.bluetooth = {
 	enable = true;
@@ -147,6 +162,7 @@
   git
   gnupg
   gping
+  helmfile
   httpie
   intel-one-mono
   jellyfin
@@ -157,9 +173,16 @@
   jetbrains-toolbox
   k9s
   kubernetes
+  (wrapHelm kubernetes-helm {
+    plugins = with pkgs.kubernetes-helmPlugins; [
+      helm-secrets
+      helm-diff
+      helm-s3
+      helm-git
+    ];
+  })
   lazydocker
   lazygit
-  micro
   minikube
   neovim
   nerdfetch
@@ -170,6 +193,7 @@
   qbittorrent
   scc
   spotify
+  tmux
   thefuck
   tor-browser
   varia
